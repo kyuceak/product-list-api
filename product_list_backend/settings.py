@@ -142,8 +142,12 @@ GOLD_API_KEY = config('GOLD_API_KEY')
 
 
 
-# ALLOW CORS FOR ANY DOMAİN
-CORS_ALLOW_ALL_ORIGINS = True
+# ALLOW? CORS FOR ANY DOMAIN
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://product-list-silk-ten.vercel.app",
+]
 
 import django_on_heroku
 django_on_heroku.settings(locals())

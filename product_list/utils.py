@@ -5,13 +5,11 @@ from django.conf import settings
 GLOBAL_GOLD_PRICE = None
 
 class GoldPriceRetrievalError(Exception):
-    """Custom exception for gold price retrieval errors."""
     pass
 
 def get_current_gold_price():
     """
     Retrieves the current price per gram of pure gold in US dollars.
-    Fetches the gold price only once; subsequent calls return the stored value.
     Raises a GoldPriceRetrievalError if the API call fails.
     """
     global GLOBAL_GOLD_PRICE
