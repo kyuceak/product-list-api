@@ -46,7 +46,14 @@ INSTALLED_APPS = [
     'product_list',
     'rest_framework',
     'corsheaders',
+    'django_filters',
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
+
 
 MIDDLEWARE = [
        'corsheaders.middleware.CorsMiddleware',
@@ -105,6 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
 
 
 # Internationalization
